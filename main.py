@@ -10,7 +10,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='>w ', intents=intents)
 command_prf = '>w '
-api_key = '22d61c33cdf75e0d888a28ec9e07f71e'
+api_key = 'API KEY'
 
 @bot.event
 async def on_ready():
@@ -33,7 +33,7 @@ async def on_message(message):
 async def ping(ctx):
     await ctx.send('pong')
 
-bot.run('MTA0MzE2MTMwOTgwNzY0NDc4OQ.GpYgDP.-xrnI6cuHhANoGszjhTr4hTjo2ab5oM_AN05_8')
+bot.run("bot's TOKEN")
 
 
 #if message.author != bot.user and message.content.startswith(command_prf):
