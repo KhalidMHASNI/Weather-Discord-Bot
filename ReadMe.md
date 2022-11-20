@@ -5,3 +5,5 @@
 
 Hi! In this repository i tried making my **first** discord robot with **Python** programming language, the discord library **discord.py** and **openweathermap** free api
 i had so much fun working on this humble mini-project. And I hope this'll help you with your work
+
+Don't Forget to change the **bot token** in [ bot.run("bot's TOKEN") ] and **api's key** in [ api_key ]
