@@ -1,5 +1,4 @@
-
-import discord
+from discord import app_commands, Intents, Client, Interaction
 from discord.ext import commands
 import json
 from urllib.request import urlopen
@@ -10,7 +9,8 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='>w ', intents=intents)
 command_prf = '>w '
-api_key = 'API KEY'
+api_key = ''        #To Enter
+token_bot = ''      #TO Enter
 
 @bot.event
 async def on_ready():
@@ -29,19 +29,14 @@ async def on_message(message):
                 await message.channel.send(embed=error_message(location))
 
 
+
+
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
-bot.run("bot's TOKEN")
+@bot.tree.command()
+async def givemebadge(interaction: Interaction):
+    await interaction.response.send_message("OK SIR hh")
 
-
-#if message.author != bot.user and message.content.startswith(command_prf):
-#        location = message.content.replace(command_prf,'').lower()
-#        if len(location) >= 1:
-#            url = f'http://api.openweathermap.org/data/2.5/weather?q={location}&APPID={api_key}&units=metric'
-#            
-#            response = urlopen(url)
-#            
-#            data = json.loads(response.read())
-#            print(data)
+bot.run(token_bot)
